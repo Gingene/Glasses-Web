@@ -1,0 +1,83 @@
+// NAV
+.nav {
+
+    .logo a {
+        background-image: url(../image/logo.png);
+        width: 80px;
+        height: 49px;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &-menu {
+
+        a {
+            padding: 25px 0;
+            display: block;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                width: 20%;
+                left: 50%;
+                /* 將偽元素定位在中央 */
+                transform: translateX(-50%);
+                /* 平移偽元素的寬度一半，使其居中，偽元素將從中央寬度 20% 往左右伸展 */
+                transition: width 0.1s ease-in-out 0s;
+            }
+
+            &:hover:after {
+                border-bottom: 8px solid $red-darker;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// RWD
+@media (max-width:575.98px) {
+    .nav {
+        padding-top: 16px;
+
+        .logo {
+            margin-bottom: 16px;
+            margin-left: 15px;
+        }
+
+        &-bar {
+            padding: 0;
+            flex-direction: column;
+            align-items: normal;
+        }
+
+        &-menu {
+            flex-wrap: wrap;
+            font-size: 16px;
+            gap: 0px;
+
+            li {
+                width: 50%;
+            }
+
+            a {
+                padding: 12px 0;
+                border: 1px solid white;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+
+                &:after {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: $red-darker;
+                }
+            }
+        }
+    }
+}

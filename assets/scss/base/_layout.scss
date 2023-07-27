@@ -1,0 +1,150 @@
+// CONTAINER
+.container {
+    max-width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+// RWD CONTAINER
+@media (max-width:767.98px) {
+    .container {
+        padding: 0 36px;
+    }
+}
+
+@media (max-width:374.98px) {
+    .container {
+        padding: 0 13px 0 14px;
+    }
+}
+
+
+
+// MARGIN
+.mb-72 {
+    margin-bottom: 72px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
+.mb-36 {
+    margin-bottom: 36.5px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-4 {
+    margin-bottom: 4px;
+}
+
+// PADDING
+.py-80 {
+    padding: 80px 0;
+}
+
+// FLEX BOX
+.d-flex {
+    display: flex;
+}
+
+.d-block{
+    display: block;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+.f-aic {
+    align-items: center;
+}
+
+.f-jcc {
+    justify-content: center;
+}
+
+.f-jcsb {
+    justify-content: space-between;
+}
+
+.f-aib {
+    align-items: baseline;
+}
+
+.gap-48 {
+    gap: 48px;
+}
+
+.gap-32 {
+    gap: 32px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+// TEXT ALIGN
+.ta-left {
+    text-align: left;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.ta-right {
+    text-align: right;
+}
+
+// PAGE SETTING
+.page-pd {
+    padding-top: 96px;
+    padding-bottom: 80px;
+}
+
+
+
+// BACKGROUND
+.bg-black{
+    background: black;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-pink {
+    background-color: $pink;
+}
+
+.bg-white {
+    background: white;
+}
+
+// RWD
+@media (max-width:575.98px) {
+    .page-pd {
+        padding-top: 40px;
+        padding-bottom: 64px;
+    }
+}

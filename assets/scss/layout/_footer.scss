@@ -1,0 +1,104 @@
+// SECTION FOOTER
+.footer {
+    padding-top: 48px;
+
+    &-menu {
+        width: 480px;
+    }
+
+    &-contact {
+        flex-direction: column;
+    }
+
+    &-link {
+        padding: 32px 0;
+        border-top: 1px solid white;
+
+        ul {
+            width: 174px;
+            margin-left: 24px;
+        }
+    }
+
+    .social-icon {
+        margin-left: 24px;
+
+        img {
+            width: 48px;
+            height: 48px;
+            max-width: none;
+        }
+    }
+
+    .material-icons-outlined {
+        margin-right: 16px;
+    }
+}
+
+// RWD
+@media (max-width:767.98px) {
+    .footer {
+        &-menu {
+            white-space: nowrap;
+        }
+
+        .social-icon {
+            gap: 16px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width:575.98px) {
+    .footer {
+        padding-top: 24px;
+
+        &-menu {
+            display: none;
+        }
+
+        &-content {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        &-link {
+            padding: 16px 0;
+            flex-direction: column;
+            gap: 8px;
+
+            ul {
+                flex-direction: column;
+                gap: 8px;
+                align-items: start;
+                margin-left: 0;
+            }
+        }
+
+        &-contact {
+            font-size: 16px;
+            margin-bottom: 24px;
+            gap: 11px;
+            order: -1;
+        }
+
+        .material-icons-outlined {
+            font-size: 16px;
+        }
+
+        .social-icon {
+            margin-left:0px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+}

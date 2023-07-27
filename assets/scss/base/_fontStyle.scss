@@ -1,0 +1,86 @@
+// FONT FAMILY
+.ff-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+// FONT STYLE
+.fs-italic{
+    font-style: italic;
+}
+
+.page-title{
+    padding-left: 16px;
+    border-left: 8px solid $red-darker;
+    margin-bottom: 33px;
+}
+
+// FONT SIZE
+.fz-64{
+    font-size: 64px;
+}
+
+.fz-48{
+    font-size: 48px;
+}
+
+.fz-36{
+    font-size: 36px;
+}
+
+.fz-24{
+    font-size: 24px;
+}
+
+.fz-20{
+    font-size: 20px;
+}
+
+.fz-16{
+    font-size: 16px;
+}
+
+.fz-14{
+    font-size: 14px;
+}
+
+// FONT WEIGHT
+.fw-black{
+    font-weight: 900;
+}
+
+.fw-bold{
+    font-weight: 700;
+}
+
+.fw-medium{
+    font-weight: 500;
+}
+
+// FONT COLOR
+.fc-red-darker{
+    color:$red-darker;
+}
+
+.fc-red{
+    color:$red;
+}
+
+.fc-black{
+    color:black;
+}
+
+.fc-gray-darker{
+    color:#707070;
+}
+
+.fc-white{
+    color:white;
+}
+
+
+// RWD
+@media (max-width:575.98px) {
+    .page-title{
+        font-size: 24px;
+    }
+}

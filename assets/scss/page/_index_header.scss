@@ -1,0 +1,35 @@
+// HEADER
+.header {
+    background-image: url(../image/home-header.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 296px 0;
+
+    .btn-cart {
+        padding: 6px 12px;
+        display: inline-block;
+
+        &:hover {
+            background-color: $red-darker;
+        }
+    }
+}
+
+// RWD
+@media (max-width:575.98px) {
+    .header{
+        height: 396px;
+        background-image: url(../image/home-header-sm.png);        
+    }
+
+    .header-slogan {
+        p {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
