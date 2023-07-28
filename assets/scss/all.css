@@ -409,6 +409,9 @@ body {
     width: 100%;
   }
 }
+/* SECTIONHEADER===================
+============================
+============================*/
 .header {
   background-image: url(../image/home-header.png);
   background-position: center;
@@ -424,18 +427,9 @@ body {
   background-color: #650300;
 }
 
-@media (max-width: 575.98px) {
-  .header {
-    height: 396px;
-    background-image: url(../image/home-header-sm.png);
-  }
-  .header-slogan p {
-    font-size: 16px;
-  }
-  .header-slogan h2 {
-    font-size: 24px;
-  }
-}
+/* SECTIONINTRO===================
+============================
+============================*/
 .intro-menu li {
   width: 25%;
 }
@@ -444,62 +438,16 @@ body {
   margin-bottom: 24.33px;
 }
 
-@media (max-width: 767.98px) {
-  .intro-menu {
-    flex-wrap: wrap;
-  }
-  .intro-menu li {
-    width: calc(50% - 12px); /* 設定最大寬度為一半，並減去間距的一半 */
-  }
-}
-@media (max-width: 575.98px) {
-  .intro {
-    padding: 40px 0;
-  }
-  .intro h3 {
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-  .intro-menu {
-    flex-wrap: wrap;
-  }
-  .intro-menu li {
-    width: 100%;
-  }
-}
+/* SECTIONPRODUCT CLASSICAL=========
+============================
+============================*/
 .menu-classical li {
   width: 33.3333333333%;
 }
 
-@media (max-width: 991.98px) {
-  .menu-classical p {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .menu-classical {
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu-classical li {
-    width: 336px;
-  }
-  .menu-classical p {
-    font-size: 48px;
-  }
-}
-@media (max-width: 575.98px) {
-  .product-classical {
-    padding: 40px 0;
-  }
-  .product-classical h3 {
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-  .menu-classical li {
-    width: 100%;
-  }
-}
+/* SECTIONPRODUCT JOINT=========
+============================
+============================*/
 .product-joint {
   background-image: url(../image/index-bg.png);
   background-size: cover;
@@ -519,26 +467,9 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 767.98px) {
-  .menu-joint {
-    flex-direction: column;
-    gap: 24px;
-    background-image: url(../image/index-bg-md.png);
-  }
-  .menu-joint li {
-    width: 100%;
-  }
-}
-@media (max-width: 575.98px) {
-  .product-joint {
-    padding: 40px 0;
-    background-image: url(../image/index-bg-sm.png);
-  }
-  .product-joint h3 {
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-}
+/* SECTIONRECOMMEND ==============
+============================
+============================*/
 .recommend-card {
   width: 25%;
   height: 511px;
@@ -574,26 +505,9 @@ body {
   background-image: url(../image/home-section5-4.png);
 }
 
-@media (max-width: 767.98px) {
-  .recommend-content {
-    flex-wrap: wrap;
-  }
-  .recommend-card {
-    width: calc(50% - 12px);
-  }
-}
-@media (max-width: 575.98px) {
-  .recommend {
-    padding: 40px 0;
-  }
-  .recommend h3 {
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-  .recommend-card {
-    width: 100%;
-  }
-}
+/* SECTIONCONTACT===================
+============================
+============================*/
 .contact-form {
   flex-direction: column;
   width: 636px;
@@ -661,7 +575,57 @@ body {
   border: none;
 }
 
+/* RWD===================
+============================
+============================*/
+@media (max-width: 991.98px) {
+  /* SECTIONPRODUCT CLASSICAL=====
+  ======================*/
+  .menu-classical p {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 767.98px) {
+  /* SECTIONINTRO===============
+  ======================*/
+  .intro-menu {
+    flex-wrap: wrap;
+  }
+  .intro-menu li {
+    width: calc(50% - 12px); /* 設定最大寬度為一半，並減去間距的一半 */
+  }
+  /* SECTIONPRODUCT CLASSICAL=====
+  ======================*/
+  .menu-classical {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-classical li {
+    width: 336px;
+  }
+  .menu-classical p {
+    font-size: 48px;
+  }
+  /* SECTIONPRODUCT JOINT=========
+  ======================*/
+  .menu-joint {
+    flex-direction: column;
+    gap: 24px;
+    background-image: url(../image/index-bg-md.png);
+  }
+  .menu-joint li {
+    width: 100%;
+  }
+  /* SECTIONRECOMMEND=========
+  ======================*/
+  .recommend-content {
+    flex-wrap: wrap;
+  }
+  .recommend-card {
+    width: calc(50% - 12px);
+  }
+  /* SECTIONCONTACT=============
+  ======================*/
   .contact {
     padding: 80px 0;
   }
@@ -682,6 +646,69 @@ body {
   }
 }
 @media (max-width: 575.98px) {
+  /*HEADER===============
+  ======================*/
+  .header {
+    height: 396px;
+    background-image: url(../image/home-header-sm.png);
+  }
+  .header-slogan p {
+    font-size: 16px;
+  }
+  .header-slogan h2 {
+    font-size: 24px;
+  }
+  /* SECTIONINTRO===============
+  ======================*/
+  .intro {
+    padding: 40px 0;
+  }
+  .intro h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .intro-menu {
+    flex-wrap: wrap;
+  }
+  .intro-menu li {
+    width: 100%;
+  }
+  /* SECTIONPRODUCT CLASSICAL=====
+  ======================*/
+  .product-classical {
+    padding: 40px 0;
+  }
+  .product-classical h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .menu-classical li {
+    width: 100%;
+  }
+  /* SECTIONPRODUCT JOINT=========
+  ======================*/
+  .product-joint {
+    padding: 40px 0;
+    background-image: url(../image/index-bg-sm.png);
+  }
+  .product-joint h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  /* SECTIONRECOMMEND=========
+  ======================*/
+  .recommend {
+    padding: 40px 0;
+  }
+  .recommend h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .recommend-card {
+    width: 100%;
+  }
+  /* SECTIONCONTACT=========
+  ======================*/
   .contact {
     padding: 40px 0;
   }
@@ -699,7 +726,7 @@ body {
   width: 41.6666666667%;
 }
 .store-photo {
-  background-image: url("../../assets/image/storepage-1.png");
+  background-image: url("../assets/image/storepage-1.png");
   width: 100%;
   height: 224px;
   background-size: cover;
@@ -740,7 +767,7 @@ body {
     width: 100%;
   }
   .store-photo {
-    background-image: url("../../image/store-1.png");
+    background-image: url("../assets/image/store-1.png");
     width: 50%;
     height: 224px;
     background-size: cover;
