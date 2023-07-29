@@ -537,42 +537,57 @@ body {
 .contact-form textarea::-webkit-scrollbar-track {
   background-color: #FBF2F2;
 }
-.contact-form .checkbox {
-  margin: 0 4px 0 0;
-  width: 24px;
-  height: 24px;
-}
 .contact-form .btn-contact {
   padding: 16px 0;
 }
 .contact-form .btn-contact:hover {
   background-color: #650300;
 }
-.contact-form input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  flex-shrink: 0;
+.contact-form .privacy {
+  /* 隱藏預設的 checkbox */
+  /* 當 content 被點選，checkmark改變背景色 */
+  /* 當 content 被點選，checkmark:after 改為 block 屬性 */
+  /* 客製 checkmark 樣式 */
 }
-.contact-form input[type=checkbox]:after {
+.contact-form .privacy-content {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.contact-form .privacy-checkbox {
   position: absolute;
-  content: " ";
-  left: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.contact-form .privacy-content input:checked ~ .privacy-checkmark {
+  background-color: #AA0601;
+}
+.contact-form .privacy-content input:checked + .privacy-checkmark:after {
+  display: block;
+}
+.contact-form .privacy-checkmark {
+  position: absolute;
   top: 0;
-  width: 24px;
+  left: 0;
   height: 24px;
+  width: 24px;
   background-color: #FBF2F2;
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 3px;
+  /* 創造勾勾樣式 */
 }
-.contact-form input[type=checkbox]:checked:after {
-  color: white;
-  content: "✓";
-  width: 24px;
-  height: 24px;
-  background-color: #AA0601;
-  text-align: center;
-  font-size: 16px;
-  border: none;
+.contact-form .privacy-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 5px;
+  width: 7px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 /* RWD===================
@@ -581,18 +596,19 @@ body {
 @media (max-width: 991.98px) {
   /* SECTIONPRODUCT CLASSICAL=====
   ======================*/
-  .menu-classical p {
+  .menu-classical h4 {
     font-size: 2rem;
   }
 }
 @media (max-width: 767.98px) {
-  /* SECTIONINTRO===============
+  /* SECTION INTRO===============
   ======================*/
   .intro-menu {
     flex-wrap: wrap;
   }
   .intro-menu li {
-    width: calc(50% - 12px); /* 設定最大寬度為一半，並減去間距的一半 */
+    width: calc(50% - 12px);
+    /* 設定最大寬度為一半，並減去間距的一半 */
   }
   /* SECTIONPRODUCT CLASSICAL=====
   ======================*/
@@ -616,7 +632,7 @@ body {
   .menu-joint li {
     width: 100%;
   }
-  /* SECTIONRECOMMEND=========
+  /* SECTION RECOMMEND=========
   ======================*/
   .recommend-content {
     flex-wrap: wrap;
@@ -624,7 +640,7 @@ body {
   .recommend-card {
     width: calc(50% - 12px);
   }
-  /* SECTIONCONTACT=============
+  /* SECTION CONTACT=============
   ======================*/
   .contact {
     padding: 80px 0;
@@ -658,7 +674,7 @@ body {
   .header-slogan h2 {
     font-size: 24px;
   }
-  /* SECTIONINTRO===============
+  /* SECTION INTRO===============
   ======================*/
   .intro {
     padding: 40px 0;
@@ -695,7 +711,7 @@ body {
     font-size: 24px;
     margin-bottom: 24px;
   }
-  /* SECTIONRECOMMEND=========
+  /* SECTION RECOMMEND=========
   ======================*/
   .recommend {
     padding: 40px 0;
@@ -707,7 +723,7 @@ body {
   .recommend-card {
     width: 100%;
   }
-  /* SECTIONCONTACT=========
+  /* SECTION CONTACT=========
   ======================*/
   .contact {
     padding: 40px 0;

@@ -35,28 +35,28 @@
 /* SECTIONPRODUCT CLASSICAL=========
 ============================
 ============================*/
-.menu-classical li{
+.menu-classical li {
     width: calc(100% /3);
 }
 
 /* SECTIONPRODUCT JOINT=========
 ============================
 ============================*/
-.product-joint{
+.product-joint {
     background-image: url(../image/index-bg.png);
     background-size: cover;
 
-    p{
-        padding:8px 0;
+    p {
+        padding: 8px 0;
     }
 
-    li{
+    li {
         width: 50%;
     }
 
 }
 
-.menu-img{
+.menu-img {
     width: 100%;
     height: 240px;
     object-fit: cover;
@@ -76,7 +76,7 @@
         overflow: hidden;
     }
 
-    &-photo{
+    &-photo {
         height: 306px;
         background-size: cover;
         background-position: center;
@@ -85,25 +85,28 @@
     &-info {
         padding: 16px;
         height: 205px;
-        flex-direction: column; 
+        flex-direction: column;
     }
 
-    &-text{
+    &-text {
         flex-grow: 1;
     }
 }
 
-.recommender{
-    &-1{
+.recommender {
+    &-1 {
         background-image: url(../image/home-section5-1.png);
     }
-    &-2{
+
+    &-2 {
         background-image: url(../image/home-section5-2.png);
     }
-    &-3{
+
+    &-3 {
         background-image: url(../image/home-section5-3.png);
     }
-    &-4{
+
+    &-4 {
         background-image: url(../image/home-section5-4.png);
     }
 
@@ -143,14 +146,8 @@
         }
 
         &::-webkit-scrollbar-track {
-            background-color:$pink; //滾動條軌道背景顏色
+            background-color: $pink; //滾動條軌道背景顏色
         }
-    }
-
-    .checkbox {
-        margin: 0 4px 0 0; //洗去 checkbox default margin
-        width: 24px;
-        height: 24px;
     }
 
     .btn-contact {
@@ -161,32 +158,59 @@
         }
     }
 
-    input[type=checkbox] {
-        cursor: pointer;
-        position: relative;
-        flex-shrink: 0;
-
-        &:after {
-            position: absolute;
-            content: " ";
-            left: 0;
-            top: 0;
-            width: 24px;
-            height: 24px;
-            background-color: $pink;
-            border: 1px solid black;
-            border-radius: 2px;
+    .privacy {
+        &-content {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
         }
 
-        &:checked:after {
-            color: white;
-            content: "✓";
-            width: 24px;
-            height: 24px;
+        /* 隱藏預設的 checkbox */
+        &-checkbox {
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+
+        /* 當 content 被點選，checkmark改變背景色 */
+        // 取代符號代表影響下一個同階層的元素，因此此段為當 content 中的 input 被點擊，因定位關係，視同與 content 同層級，所以也可以視作 content 被點選，input 同層的下一個元素 checkmark 會被改變
+        &-content input:checked~.privacy-checkmark {
             background-color: $red;
-            text-align: center;
-            font-size: 16px;
-            border: none;
+        }
+
+        /* 當 content 被點選，checkmark:after 改為 block 屬性 */
+        &-content input:checked+.privacy-checkmark:after {
+            display: block;
+        }
+
+        /* 客製 checkmark 樣式 */
+        &-checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 24px;
+            width: 24px;
+            background-color: $pink;
+            border: 1px solid black;
+            border-radius: 3px;
+
+            /* 創造勾勾樣式 */
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 8px;
+                top: 5px;
+                // 創造一個白邊框框，並旋轉，假裝是勾勾
+                width: 7px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
         }
     }
 }
@@ -202,63 +226,66 @@
 ============================
 ============================*/
 @media (max-width: 991.98px) {
+
     /* SECTIONPRODUCT CLASSICAL=====
     ======================*/
-    .menu-classical p{
+    .menu-classical h4 {
         font-size: 2rem;
     }
 }
 
 
 @media (max-width:767.98px) {
-    /* SECTIONINTRO===============
+
+    /* SECTION INTRO===============
     ======================*/
     .intro-menu {
         flex-wrap: wrap;
 
         li {
-            width: calc(50% - 12px); /* 設定最大寬度為一半，並減去間距的一半 */
+            width: calc(50% - 12px);
+            /* 設定最大寬度為一半，並減去間距的一半 */
         }
     }
 
     /* SECTIONPRODUCT CLASSICAL=====
     ======================*/
-    .menu-classical{
+    .menu-classical {
         flex-direction: column;
         align-items: center;
 
-        li{
+        li {
             width: 336px;
         }
 
-        p{
+        p {
             font-size: 48px;
         }
     }
 
     /* SECTIONPRODUCT JOINT=========
     ======================*/
-    .menu-joint{
+    .menu-joint {
         flex-direction: column;
-        gap:24px; 
+        gap: 24px;
         background-image: url(../image/index-bg-md.png);
-        
-        li{
+
+        li {
             width: 100%;
         }
     }
 
-    /* SECTIONRECOMMEND=========
+    /* SECTION RECOMMEND=========
     ======================*/
-    .recommend-content{
+    .recommend-content {
         flex-wrap: wrap;
     }
 
-    .recommend-card{
+    .recommend-card {
         width: calc(50% - 12px);
     }
 
-    /* SECTIONCONTACT=============
+    /* SECTION CONTACT=============
     ======================*/
     .contact {
         padding: 80px 0;
@@ -288,11 +315,12 @@
 
 
 @media (max-width:575.98px) {
+
     /*HEADER===============
     ======================*/
-    .header{
+    .header {
         height: 396px;
-        background-image: url(../image/home-header-sm.png);        
+        background-image: url(../image/home-header-sm.png);
     }
 
     .header-slogan {
@@ -305,10 +333,10 @@
         }
     }
 
-    /* SECTIONINTRO===============
+    /* SECTION INTRO===============
     ======================*/
     .intro {
-        padding:40px 0;
+        padding: 40px 0;
 
         h3 {
             font-size: 24px;
@@ -317,7 +345,7 @@
 
         &-menu {
             flex-wrap: wrap;
-    
+
             li {
                 width: 100%;
             }
@@ -327,46 +355,46 @@
     /* SECTIONPRODUCT CLASSICAL=====
     ======================*/
     .product-classical {
-        padding:40px 0;
-        
+        padding: 40px 0;
+
         h3 {
             font-size: 24px;
             margin-bottom: 24px;
         }
     }
 
-    .menu-classical li{
+    .menu-classical li {
         width: 100%;
     }
 
     /* SECTIONPRODUCT JOINT=========
     ======================*/
     .product-joint {
-        padding:40px 0;
+        padding: 40px 0;
         background-image: url(../image/index-bg-sm.png);
-        
+
         h3 {
             font-size: 24px;
             margin-bottom: 24px;
         }
     }
 
-    /* SECTIONRECOMMEND=========
+    /* SECTION RECOMMEND=========
     ======================*/
-    .recommend{
-        padding:40px 0;
+    .recommend {
+        padding: 40px 0;
 
         h3 {
             font-size: 24px;
             margin-bottom: 24px;
         }
 
-        &-card{
+        &-card {
             width: 100%;
         }
     }
 
-    /* SECTIONCONTACT=========
+    /* SECTION CONTACT=========
     ======================*/
     .contact {
         padding: 40px 0;
