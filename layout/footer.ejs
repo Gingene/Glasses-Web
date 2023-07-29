@@ -1,104 +1,35 @@
-// SECTION FOOTER
-.footer {
-    padding-top: 48px;
-
-    &-menu {
-        width: 480px;
-    }
-
-    &-contact {
-        flex-direction: column;
-    }
-
-    &-link {
-        padding: 32px 0;
-        border-top: 1px solid white;
-
-        ul {
-            width: 174px;
-            margin-left: 24px;
-        }
-    }
-
-    .social-icon {
-        margin-left: 24px;
-
-        img {
-            width: 48px;
-            height: 48px;
-            max-width: none;
-        }
-    }
-
-    .material-icons-outlined {
-        margin-right: 16px;
-    }
-}
-
-// RWD
-@media (max-width:767.98px) {
-    .footer {
-        &-menu {
-            white-space: nowrap;
-        }
-
-        .social-icon {
-            gap: 16px;
-
-            img {
-                width: 40px;
-                height: 40px;
-            }
-        }
-    }
-}
-
-@media (max-width:575.98px) {
-    .footer {
-        padding-top: 24px;
-
-        &-menu {
-            display: none;
-        }
-
-        &-content {
-            display: flex;
-            align-items: start;
-            justify-content: space-between;
-        }
-
-        &-link {
-            padding: 16px 0;
-            flex-direction: column;
-            gap: 8px;
-
-            ul {
-                flex-direction: column;
-                gap: 8px;
-                align-items: start;
-                margin-left: 0;
-            }
-        }
-
-        &-contact {
-            font-size: 16px;
-            margin-bottom: 24px;
-            gap: 11px;
-            order: -1;
-        }
-
-        .material-icons-outlined {
-            font-size: 16px;
-        }
-
-        .social-icon {
-            margin-left:0px;
-
-            img {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    }
-
-}
+<footer class="footer bg-red fc-white">
+    <div class="container">
+      <div class="footer-content">
+        <div class="d-flex f-jcsb f-aic mb-24">
+          <ul class="footer-menu d-flex f-jcsb fz-16">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="#">系列鏡框</a></li>
+            <li><a href="storelist.html">門市據點</a></li>
+            <li><a href="#">部落格</a></li>
+            <li><a href="#">常見問題</a></li>
+        </ul>
+          <div class="d-flex gap-32 social-icon">
+            <a href="#"><img src="../assets/image/ic-social-fb.png" alt="facebook"></a>
+            <a href="#"><img src="../assets/image/ic_social_ig.png" alt="instagram"></a>
+            <a href="#"><img src="../assets/image/ic_social_line.png" alt="line"></a>
+          </div>
+        </div>
+        <div class="footer-contact d-flex gap-8 fz-36 mb-32">
+          <a class="d-flex f-aic" href="tel:0800000000"><span class="material-icons-outlined fz-36">
+              call
+            </span><span>0800-000-000</span></a>
+          <a class="d-flex f-aic" href="mailto:glasses@business.com"><span class="material-icons-outlined fz-36">
+              email
+            </span><span>glasses@business.com</span></a>
+        </div>
+      </div>
+      <div class="footer-link d-flex f-jcsb">
+        <p class="fz-16 ff-roboto">Copyright © 2020 Glasses.All rights reserved.</p>
+        <ul class="fz-14 d-flex f-jcsb f-aic">
+            <li><a href="#">隱私權政策</a></li>
+            <li><a href="#">服務條款</a></li>
+        </ul>
+    </div>
+    </div>
+  </footer>
