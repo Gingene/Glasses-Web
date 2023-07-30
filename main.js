@@ -9,7 +9,7 @@ const storeList = [
       hours: "營業時間：10:00-21:00",
       address: "地址：台北市中山區南京東路25巷2-1號",
       photo:
-      "./../image/store-1.png",
+      "../assets/image/store-1.png",
       map:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4636138459286!2d121.53300454855906!3d25.0522709805177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdf92494d29%3A0xd908a8a881f73476!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuInmrrUyNeiZnw!5e0!3m2!1szh-TW!2stw!4v1689689324255!5m2!1szh-TW!2stw"
     },
@@ -55,7 +55,7 @@ const storeList = [
     }
   ];
 
-  const imgStore1 = new URL('../assets/image/store-1.png', import.meta.url).href
+
   
   
   /* STORE LOCATION LIST ==============
@@ -201,10 +201,11 @@ const storeList = [
     </div>
   </div>`
   }
+  
   // 獲得 select 篩選過後的新資料
    function getLocationCard(item){
     return `<div class="location-card">
-    <img class="location-photo" src="${imgStore1}" alt="${item.store}">
+    <img class="location-photo" src="${item.photo}" alt="${item.store}">
     <p class="location-title fz-24">${item.store}</p>
     <ul class="location-detail fz-20">
         <li class="mb-8 d-flex f-aib"><span class="material-icons-outlined">
