@@ -89,7 +89,7 @@ const storeList = [
   function getDefaultLocationData(){
     return `<div id="locationContent" class="location-content d-flex f-wrap gap-24">
     <div class="location-card">
-        <img class="location-photo" src="${imgStore1}" alt="台北中山旗艦店">
+        <img class="location-photo" src="../assets/image/store-1.png" alt="台北中山旗艦店">
         <p class="location-title fz-24">台北中山旗艦店</p>
         <ul class="location-detail fz-20">
             <li class="mb-8 d-flex f-aib"><span class="material-icons-outlined">
@@ -201,7 +201,7 @@ const storeList = [
     </div>
   </div>`
   }
-  
+
   // 獲得 select 篩選過後的新資料
    function getLocationCard(item){
     return `<div class="location-card">
