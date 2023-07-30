@@ -9,7 +9,7 @@ const storeList = [
       hours: "營業時間：10:00-21:00",
       address: "地址：台北市中山區南京東路25巷2-1號",
       photo:
-      "/Glasses-Web/assets/image/store-1.png",
+      "../assets/image/store-1.png",
       map:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4636138459286!2d121.53300454855906!3d25.0522709805177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdf92494d29%3A0xd908a8a881f73476!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuInmrrUyNeiZnw!5e0!3m2!1szh-TW!2stw!4v1689689324255!5m2!1szh-TW!2stw"
     },
@@ -19,7 +19,7 @@ const storeList = [
       hours: "營業時間：10:00-21:00",
       address: "地址：台北市中正區復興南路 132-1 號",
       photo:
-      "/Glasses-Web/assets/image/store-2.png",
+      "../assets/image/store-2.png",
       map:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.615088930526!2d121.54113651123167!3d25.047133437669444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdbf61946df%3A0x3c99fa1b2467da21!2z5b6p6IiI5Y2X6Lev!5e0!3m2!1szh-TW!2stw!4v1689738423666!5m2!1szh-TW!2stw"
     },
@@ -54,6 +54,8 @@ const storeList = [
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.641781355878!2d120.287666411174!3d22.667140829412258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05aebd7519bb%3A0x53dcd3769d59162d!2zODA06auY6ZuE5biC6byT5bGx5Y2A5Lit6I-v5LiA6LevNjPomZ8!5e0!3m2!1szh-TW!2stw!4v1689738723761!5m2!1szh-TW!2stw"
     }
   ];
+
+  const imgStore1 = new URL('../assets/image/store-1.png', import.meta.url).href
   
   
   /* STORE LOCATION LIST ==============
@@ -87,7 +89,7 @@ const storeList = [
   function getDefaultLocationData(){
     return `<div id="locationContent" class="location-content d-flex f-wrap gap-24">
     <div class="location-card">
-        <img class="location-photo" src="../assets/image/store-1.png" alt="台北中山旗艦店">
+        <img class="location-photo" src="${imgStore1}" alt="台北中山旗艦店">
         <p class="location-title fz-24">台北中山旗艦店</p>
         <ul class="location-detail fz-20">
             <li class="mb-8 d-flex f-aib"><span class="material-icons-outlined">
@@ -202,7 +204,7 @@ const storeList = [
   // 獲得 select 篩選過後的新資料
    function getLocationCard(item){
     return `<div class="location-card">
-    <img class="location-photo" src="${item.photo}" alt="${item.store}">
+    <img class="location-photo" src="${imgStore1}" alt="${item.store}">
     <p class="location-title fz-24">${item.store}</p>
     <ul class="location-detail fz-20">
         <li class="mb-8 d-flex f-aib"><span class="material-icons-outlined">
