@@ -1,0 +1,63 @@
+.product-nav li:nth-child(2){
+    border-bottom: 8px solid $red;
+
+    &:hover:after {
+        border-bottom: none;
+    }
+}
+
+.sunglasses{
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &-banner div{
+        width: 50%;
+        height: 296px;
+
+        &:first-child{
+            background: url("../image/product-header-3.png") no-repeat center;
+            background-size: cover;
+        }
+
+        &:last-child{
+            background: url("../image/product-header-4.png") no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &-card{
+        width: calc((100% - 12px * 3) / 4);        
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sunglasses{
+        padding:80px 36px;
+
+        &-banner div:first-child{
+            background: url("../image/product-header-sm-3.png") no-repeat center;
+            background-size: cover;
+        }
+
+        &-banner div:last-child{
+            background: url("../image/product-header-sm-4.png") no-repeat center;
+            background-size: cover;
+        }
+    }
+}
+
+
+@media (max-width:767.98px) {
+    .sunglasses{
+        padding:40px 14px;
+
+        h2,h3{
+            font-size: 24px;
+        }
+
+        &-banner div{
+            height: 136px;
+        }
+    }
+}
+ 
