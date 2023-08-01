@@ -15,12 +15,12 @@
         height: 296px;
 
         &:first-child{
-            background: url("../assets/image/product-header-1.png") no-repeat center;
+            background: url("../image/product-header-1.png") no-repeat center;
             background-size: cover;
         }
 
         &:last-child{
-            background: url("../assets/image/product-header-2.png") no-repeat center;
+            background: url("../image/product-header-2.png") no-repeat center;
             background-size: cover;
         }
     }
@@ -35,12 +35,12 @@
         padding:80px 36px;
 
         &-banner div:first-child{
-            background: url("../assets/image/product-header-sm-1.png") no-repeat center;
+            background: url("../image/product-header-sm-1.png") no-repeat center;
             background-size: cover;
         }
 
         &-banner div:last-child{
-            background: url("../assets/image/product-header-sm-2.png") no-repeat center;
+            background: url("../image/product-header-sm-2.png") no-repeat center;
             background-size: cover;
         }
     }
