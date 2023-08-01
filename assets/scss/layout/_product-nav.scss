@@ -1,0 +1,43 @@
+.product-nav {
+    li {
+        width: calc(100% / 3);
+        border-right: 1px solid $gray-lighter;
+        border-left: 1px solid $gray-lighter;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 20%;
+            left: 50%;
+            /* 將偽元素定位在中央 */
+            transform: translateX(-50%);
+            /* 平移偽元素的寬度一半，使其居中，偽元素將從中央寬度 20% 往左右伸展 */
+            transition: width 0.1s ease-in-out 0s;
+        }
+
+        &:hover:after {
+            border-bottom: 8px solid $red;
+            width: 100%;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 24px;             
+    }
+}
+
+
+@media (max-width:767.98px) {
+    .product-nav{
+        padding:0;
+
+        a{
+            font-size: 16px;
+            padding:24px 0;
+        }
+    } 
+}
+

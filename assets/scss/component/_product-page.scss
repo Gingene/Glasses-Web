@@ -1,0 +1,32 @@
+.product-page {  
+    li {
+        border: 1px solid $gray-darker;
+    }
+
+    a {
+        padding: 12px 16px;
+        display: inline-block;
+
+        &:hover{
+            background-color: $gray;
+        }
+
+        &.active {
+            background-color: black;
+            color: white;
+          }
+    }
+
+    a:first-child,
+    a:last-child {
+        padding: 11px 12px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .product-page{
+        a {
+            font-size: 16px;
+        }
+    }
+}
