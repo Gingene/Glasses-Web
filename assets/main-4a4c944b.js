@@ -1,0 +1,22 @@
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const o of e)if(o.type==="childList")for(const c of o.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&t(c)}).observe(document,{childList:!0,subtree:!0});function n(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerPolicy&&(o.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?o.credentials="include":e.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function t(e){if(e.ep)return;e.ep=!0;const o=n(e);fetch(e.href,o)}})();const d="/Glasses-Web/assets/store-1-1f271787.png",i="/Glasses-Web/assets/store-2-74dc695a.png",m="/Glasses-Web/assets/store-3-65c3463f.png",p="/Glasses-Web/assets/store-4-59fac843.png",f="/Glasses-Web/assets/store-5-9d88888b.png",a=[{store:"台北中山旗艦店",phone:"電話：(02)000-1234",hours:"營業時間：10:00-21:00",address:"地址：台北市中山區南京東路25巷2-1號",photo:d,map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4636138459286!2d121.53300454855906!3d25.0522709805177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdf92494d29%3A0xd908a8a881f73476!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuInmrrUyNeiZnw!5e0!3m2!1szh-TW!2stw!4v1689689324255!5m2!1szh-TW!2stw"},{store:"台北綠園店",phone:"電話：(02)000-2345",hours:"營業時間：10:00-21:00",address:"地址：台北市中正區復興南路 132-1 號",photo:i,map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.615088930526!2d121.54113651123167!3d25.047133437669444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdbf61946df%3A0x3c99fa1b2467da21!2z5b6p6IiI5Y2X6Lev!5e0!3m2!1szh-TW!2stw!4v1689738423666!5m2!1szh-TW!2stw"},{store:"台中清水旗艦店",phone:"電話：(02)000-1234",hours:"營業時間：10:00-21:00",address:"地址：台中市清水區經南一路 23 號 8 樓",photo:m,map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2078.585536393451!2d120.70044460975465!3d24.21803310729417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917660c1fff99%3A0xd921b3953d98ae27!2zNDI35Y-w5Lit5biC5r2t5a2Q5Y2A5Y2X5LiA6Lev!5e0!3m2!1szh-TW!2stw!4v1689738558821!5m2!1szh-TW!2stw"},{store:"高雄中正形象店",phone:"電話：(07)000-2345",hours:"營業時間：10:00-21:00",address:"地址：高雄市苓雅區中正路 38 號 12 樓",photo:p,map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.7639136856073!2d120.338210411173!3d22.62528963095086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04b492b36c93%3A0xde28107e320c1921!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A5Lit5q2j5LiA6LevMzjomZ8!5e0!3m2!1szh-TW!2stw!4v1689751386260!5m2!1szh-TW!2stw"},{store:"高雄夢時代店",phone:"電話：(07)000-1234",hours:"營業時間：10:00-21:00",address:"地址：高雄市前鎮區中華一路 63 號 6 樓",photo:f,map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.641781355878!2d120.287666411174!3d22.667140829412258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05aebd7519bb%3A0x53dcd3769d59162d!2zODA06auY6ZuE5biC6byT5bGx5Y2A5Lit6I-v5LiA6LevNjPomZ8!5e0!3m2!1szh-TW!2stw!4v1689738723761!5m2!1szh-TW!2stw"}],u=document.querySelectorAll("#locationDropdown");let h=document.getElementById("locationContent");u.forEach(s=>{s.addEventListener("change",r=>{const n=r.target.value;let t="";n===""?a.forEach(e=>{t+=l(e)}):a.forEach(e=>{e.address.slice(3,6)===n&&(t+=l(e))}),h.innerHTML=t})});function l(s){return console.log(s.photo),`<div class="location-card">
+<img class="location-photo" src="${s.photo}" alt="${s.store}">
+<p class="location-title fz-24">${s.store}</p>
+<ul class="location-detail fz-20">
+<li class="mb-8 d-flex f-aib"><span class="material-icons-outlined">
+    phone
+</span>
+<p>${s.phone}</p>
+</li>
+<li class="mb-8 d-flex f-aib"><span class="material-icons-outlined">
+    schedule
+</span>
+<p>${s.hours}</p>
+</li>
+<li class="d-flex f-aib"><span class="material-icons-outlined">
+    place
+</span>
+<p>${s.address}</p>
+</li>
+</ul>
+<a href="store-台北中山旗艦店.html" class="btn-store ta-center d-block bg-black fc-white" type="button">詳細資訊</a>
+</div>`}const b=document.querySelectorAll("#storeDropdown"),g=document.getElementById("storePhoto"),w=document.getElementById("storeTitle"),L=document.getElementById("storePhone"),y=document.getElementById("storeHours"),A=document.getElementById("storeAddress"),x=document.querySelector("iframe");b.forEach(s=>{s.addEventListener("change",r=>{const n=r.target.value;a.forEach(t=>{console.log(t.photo),n===t.store&&(g.style.backgroundImage=`url(${t.photo})`,w.textContent=t.store,L.textContent=t.phone,y.textContent=t.hours,A.textContent=t.address,x.setAttribute("src",`${t.map}`))})})});
